@@ -7,4 +7,4 @@
 - confiugre embed message
 
 ## Images
-<img src="/imgs/example.png" alt="MarineGEO circle logo" style="height: 100px; width:100px;"/>
+<img src="/imgs/image.png" alt="image" style="height: 100px; width:100px;"/>

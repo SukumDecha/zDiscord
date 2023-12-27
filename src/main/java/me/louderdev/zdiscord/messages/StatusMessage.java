@@ -30,19 +30,14 @@ public class StatusMessage implements IMessage {
     @Override
     public EmbedBuilder createEmbed(boolean isOnline) {
         EmbedBuilder eb = new EmbedBuilder();
-        eb.setTitle(title);
-
         eb.setColor(isOnline ? Color.green : Color.red);
 
+        eb.setTitle(title);
         eb.setDescription(isOnline ? online : offline);
 
         eb.setAuthor(topTitle, null, topTitleUrl);
-
         eb.setFooter(footer, footerUrl);
         eb.setThumbnail(imgUrl);
-//        eb.setImage("https://github.com/zekroTJA/DiscordBot/blob/master/.websrc/logo%20-%20title.png");
-//        eb.setThumbnail("https://github.com/zekroTJA/DiscordBot/blob/master/.websrc/logo%20-%20title.png");
-
         return eb;
     }
 }

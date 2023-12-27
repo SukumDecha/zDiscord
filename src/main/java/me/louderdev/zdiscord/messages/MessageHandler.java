@@ -18,7 +18,7 @@ public class MessageHandler<T> {
     }
 
     private void loadMessages() {
-        ConfigFile configFile = plugin.getC();
+        ConfigFile configFile = plugin.getConfigFile();
 
         messages.add(new StatusMessage().load(configFile));
         plugin.getLogger().info("Loaded " + messages.size() + " messages.");

@@ -7,7 +7,6 @@ import me.louderdev.zdiscord.bot.BotBuilder;
 import me.louderdev.zdiscord.bot.BotSetting;
 import me.louderdev.zdiscord.messages.MessageHandler;
 import me.louderdev.zdiscord.utils.file.ConfigFile;
-import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.JDA;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -19,7 +18,7 @@ public final class ZDiscord extends JavaPlugin {
     private JDA jda;
     private BotSetting botSetting;
     private MessageHandler messageHandler;
-    private ConfigFile c;
+    private ConfigFile configFile;
 
     @Override
     public void onEnable() {
@@ -39,20 +38,23 @@ public final class ZDiscord extends JavaPlugin {
 
     @SneakyThrows
     private void loadConfig() {
-        c = new ConfigFile(this, "config.yml");
+        configFile = new ConfigFile(this, "config.yml");
 
         botSetting = new BotSetting();
-        botSetting.setToken(c.getString("BOT.TOKEN"));
-        botSetting.setActivity(c.getString("BOT.ACTIVITY"));
-        botSetting.setGuildId(c.getLong("GUILD_ID"));
-        botSetting.setStatusId(c.getLong("CHANNEL_ID.STATUS_LOGGER"));
+        botSetting.setToken(configFile.getString("BOT.TOKEN"));
+        botSetting.setActivity(configFile.getString("BOT.ACTIVITY"));
+        botSetting.setGuildId(configFile.getLong("GUILD_ID"));
+        botSetting.setStatusId(configFile.getLong("CHANNEL_ID.STATUS_LOGGER"));
 
         getLogger().info("Loaded Bot settings...");
     }
 
     private void loadMessages() {
         messageHandler = new MessageHandler(this);
+
+        getLogger().info("Loaded handlers...");
     }
+
     @SneakyThrows
     private void createBot() {
         getLogger().info(botSetting.getToken());

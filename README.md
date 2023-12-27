@@ -5,3 +5,6 @@
 ## Features
 - log status (embed message) into discord server everytime server start / stop
 - confiugre embed message
+
+## Images
+<img src="/imgs/example.png" alt="MarineGEO circle logo" style="height: 100px; width:100px;"/>

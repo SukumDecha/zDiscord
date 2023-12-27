@@ -7,4 +7,4 @@
 - confiugre embed message
 
 ## Images
-<img src="/imgs/image.png" alt="image" style="height: 100px; width:100px;"/>
+<img src="/imgs/image.png" alt="image" style="height: 600px; width:800px;"/>

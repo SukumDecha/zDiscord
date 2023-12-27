@@ -1,0 +1,4 @@
+name: zDiscord
+version: '${project.version}'
+main: me.louderdev.zdiscord.ZDiscord
+api-version: '1.20'

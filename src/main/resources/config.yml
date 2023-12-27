@@ -1,0 +1,20 @@
+BOT:
+  TOKEN: 12345678
+  ACTIVITY: Watching Louder Shop
+
+GUILD_ID: 711519903567577111
+
+CHANNEL_ID:
+  STATUS_LOGGER: 731851342473199627
+
+MESSAGE:
+  TOP_TITLE: Status Logger
+  TOP_TITLE_URL: https://cdn-icons-png.flaticon.com/512/603/603155.png
+
+  TITLE: Server Status
+  IMG_URL: https://upload.wikimedia.org/wikipedia/commons/5/5a/Cheeky-Meliodas.png
+  ONLINE: `Server back online ✅ `
+  OFFLINE: `Server is now offline ❌`
+
+  FOOTER: Develop with <3 by Sukum_Decha
+  FOOTER_URL: https://upload.wikimedia.org/wikipedia/commons/5/5a/Cheeky-Meliodas.png
